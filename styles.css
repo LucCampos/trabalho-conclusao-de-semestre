@@ -133,8 +133,8 @@ select:focus {
 }
 .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
 
-.btn-back        { background: var(--primary); color: #fff; }
-.btn-back:hover  { background: #1a252f; }
+.btn-back        { background-color: rgba(0, 0, 0, 0.5); color: #fff; }
+.btn-back:hover  { background: #1a252f; transform: translateX(-10px);}
 
 /* E acrescente as cores específicas de cada botão novo: */
 .btn-edit           { background: var(--blue);  color: #fff; }
@@ -269,12 +269,13 @@ textarea {
 }
 
 .page-header h1 {
-    font-size: 2rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 4rem;
     color: white;
     margin-bottom: .35rem;
 }
 
-.page-header p { color: white; font-size: 1rem; }
+.page-header p { color: white; font-size: 1rem;}
 
 .menu-grid {
     display: grid;
@@ -295,8 +296,9 @@ textarea {
 }
 
 .menu-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-16px);
     box-shadow: 0 8px 20px rgba(0,0,0,.13);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .menu-card a {

@@ -35,7 +35,7 @@ include('valida_sessao.php');
             $_SESSION['usuario'] contém o nome salvo no login.
             htmlspecialchars() protege contra XSS na exibição.
         -->
-        <p>Olá, <strong><?php echo htmlspecialchars($_SESSION['usuario']); ?></strong>! O que deseja fazer?</p>
+        <p>Olá, <strong><?php echo htmlspecialchars($_SESSION['usuario']); ?></strong>! Bem vindo a um reino de ideias, onde planeja começar?</p><br><hr>
     </div>
 
     <!-- Grade de cards do menu -->
