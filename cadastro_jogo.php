@@ -167,7 +167,7 @@ if ($artista_id_filtro) {
 <div class="container">
 
     <div class="page-header-bar">
-        <h2><?php echo $musica ? '✏️ Editar Música' : ' Novo Jogo'; ?></h2>
+        <h2 class="titulo"><?php echo $musica ? '✏️ Editar Jogo' : ' Novo Jogo'; ?></h2>
         <div class="header-actions">
             <?php if ($artista_id_filtro): ?>
                 <a href="cadastro_jogo.php" class="btn-back">⬅ Voltar para Artistas</a>
@@ -232,7 +232,7 @@ if ($artista_id_filtro) {
 
             <!-- Linha 3: YouTube + Capa -->
             <div class="form-group">
-                <label for="youtube_link">Link do YouTube <span style="color:var(--red)">*</span></label>
+                <label for="youtube_link">Trailer do jogo<span style="color:var(--red)">*</span></label>
                 <input type="url" id="youtube_link" name="youtube_link"
                        value="<?php echo htmlspecialchars($musica['youtube_link'] ?? ''); ?>"
                        required placeholder="https://www.youtube.com/watch?v=…">
