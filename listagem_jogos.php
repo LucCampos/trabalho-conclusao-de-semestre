@@ -191,82 +191,23 @@ if (!empty($params)) {
         </div>
     <?php endif; ?>
 
-    <!-- TABELA DE MÚSICAS -->
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th class="col-capa">Capa</th>
-                    <th>Título</th>
-                    <th>Artista</th>
-                    <th>Álbum</th>
-                    <th>Gênero</th>
-                    <th class="col-youtube">YouTube</th>
-                    <th class="col-acoes">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if ($musicas->num_rows > 0): ?>
-                    <?php while ($row = $musicas->fetch_assoc()): ?>
-                        <tr>
-                            <td>
-                                <?php if ($row['imagem_capa']): ?>
-                                    <img src="<?php echo htmlspecialchars($row['imagem_capa']); ?>"
-                                         alt="Capa" class="table-thumbnail" loading="lazy">
-                                <?php else: ?>
-                                    <div class="no-image">Sem<br>capa</div>
-                                <?php endif; ?>
-                            </td>
-                            <td><?php echo htmlspecialchars($row['titulo']); ?></td>
-                            <td><?php echo htmlspecialchars($row['artista_nome']); ?></td>
-                            <td><?php echo htmlspecialchars($row['album'])  ?: '—'; ?></td>
-                            <td><?php echo htmlspecialchars($row['genero']) ?: '—'; ?></td>
-                            <td>
-                                <?php
-                                // Gera a URL de watch (abre a música diretamente, não o canal)
-                                $vid = getYoutubeVideoId($row['youtube_link'] ?? '');
-                                if ($vid):
-                                    $watch = "https://www.youtube.com/watch?v={$vid}";
-                                ?>
-                                    <!--
-                                        target="_blank"       → nova aba
-                                        rel="noopener noreferrer" → segurança:
-                                        impede que a nova aba acesse a janela atual
-                                    -->
-                                    <a href="<?php echo $watch; ?>"
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                       class="btn-youtube">▶ Assistir</a>
-                                <?php else: ?>
-                                    <span class="text-muted">—</span>
-                                <?php endif; ?>
-                            </td>
-                            <td>
-                                <div class="action-buttons">
-                                    <a href="cadastro_jogo.php?edit_id=<?php echo $row['id']; ?>"
-                                       class="btn-edit">✏️ Editar</a>
-                                    <!--
-                                        http_build_query($_GET) preserva os filtros ativos
-                                        na URL após excluir, para não perder a busca
-                                    -->
-                                    <a href="?delete_id=<?php echo $row['id']; ?><?php echo !empty($_GET) ? '&' . http_build_query($_GET) : ''; ?>"
-                                       onclick="return confirm('Excluir <?php echo addslashes($row['titulo']); ?>?')"
-                                       class="btn-delete">🗑️</a>
-                                </div>
-                            </td>
-                        </tr>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <tr>
-                        <td colspan="7" class="empty-cell">
-                            <?php echo !empty($_GET) ? 'Nenhum jogo encontrado com esses filtros.' : 'Nenhum jogo cadastrado ainda.'; ?>
-                        </td>
-                    </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
+    <!-- TABELA DOS JOGOS -->
+    <div class="grid-jogos">
+        <?php if ($musicas->num_rows > 0): ?>
+        <?php while ($row = $musicas->fetch_assoc()):?>
+    
+        <?php if ($row['imagem_capa']): ?>
+            <img src="<?php echo htmlspecialchars($row['imagem_capa']); ?>"
+                alt="Capa" class="table-thumbnail" loading="lazy">
+            <?php else: ?>
+                <div class="no-image">Sem<br>capa</div>
+            <?php endif; ?>
+            <?php endwhile; ?>
 
+            <?php else: ?>
+                <?php echo !empty($_GET) ? 'Nenhum jogo encontrado com esses filtros.' : 'Nenhum jogo cadastrado ainda.'; ?>
+            <?php endif; ?>
+    </div>
 
 
 </div>
