@@ -61,7 +61,7 @@ include('valida_sessao.php');
             <a href="listagem_jogos.php">
                 <div class="menu-card-icon">🔍</div>
                 <div class="menu-card-title">Listagem de jogos</div>
-                <div class="menu-card-desc">Visualize e filtre todas os jogos</div>
+                <div class="menu-card-desc">Visualize e filtre todos os jogos</div>
             </a>
         </div>
 
