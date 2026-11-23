@@ -167,7 +167,7 @@ if ($artista_id_filtro) {
 <div class="container">
 
     <div class="page-header-bar">
-        <h2 class="titulo"><?php echo $musica ? '✏️ <h2 class="titulo"> Editar Jogo <h2>' : ' Novo Jogo'; ?></h2>
+        <h2><?php echo $musica ? '✏️Editar Jogo' : ' Novo Jogo'; ?></h2>
         <div class="header-actions">
             <?php if ($artista_id_filtro): ?>
                 <a href="cadastro_jogo.php" class="btn-back">⬅ Voltar para Artistas</a>

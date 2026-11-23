@@ -82,7 +82,7 @@ select {
     border-radius: 6px;
     font-size: .95rem;
     font-family: var(--font);
-    color: var(--text);
+    color: white;
     background: var(--surface);
     transition: border-color .2s, box-shadow .2s;
 }
