@@ -44,8 +44,8 @@ include('valida_sessao.php');
         <div class="menu-card">
             <a href="cadastro_artista.php">
                 <div class="menu-card-icon">🕹️</div>
-                <div class="menu-card-title">Gerenciar Artistas</div>
-                <div class="menu-card-desc">Cadastre e edite artistas</div>
+                <div class="menu-card-title">Gerenciar Empresas</div>
+                <div class="menu-card-desc">Cadastre e edite as empresas</div>
             </a>
         </div>
 
