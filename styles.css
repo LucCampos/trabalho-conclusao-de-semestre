@@ -53,7 +53,7 @@ body {
       vão reaproveitar estas regras)
 ----------------------------------------------- */
 form {
-    background: var(--surface);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
