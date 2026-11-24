@@ -622,6 +622,10 @@ td.empty-cell {
     transform: transfo;
 }
 
+.jogo-descricao {
+    color: white;
+    text-align: right;
+}
 /* -----------------------------------------------
    15. UTILITÁRIOS
 ----------------------------------------------- */

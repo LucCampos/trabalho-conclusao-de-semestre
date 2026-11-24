@@ -18,6 +18,7 @@
 
 
 <section class="secao-jogo">
+    <section>
     <h1 style="color: white;">Jogo tal</h1>
     <iframe class="video-youtube" width="560" height="315"
         src="https://www.youtube.com/embed/eqUFcr1mI3Y"
@@ -25,6 +26,11 @@
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-In-picture"
         allowfullscreen>
     </iframe>
+    </section>
+
+    <section class="jogo-descricao">
+        <p>teste</p>
+    </section>
 </section>
 
 </div>
