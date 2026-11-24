@@ -437,9 +437,10 @@ small {
 }
 
 /* Campo que ocupa as 2 colunas inteiras (usado na Etapa 8, para a letra da música) */
-.form-grid .form-group.full {
+.form-grid .form-group .full {
     grid-column: 1 / -1;
 }
+
 
 /* Grupo de botões abaixo do form */
 .form-actions {
