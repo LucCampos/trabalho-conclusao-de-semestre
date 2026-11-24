@@ -337,6 +337,12 @@ textarea {
     text-decoration: none;
 }
 
+.secao-jogo {
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 60px;
+}
+
 .menu-card-icon  { font-size: 2.2rem; margin-bottom: .75rem; font-size: 5rem;}
 .menu-card-title { font-size: 1.05rem; font-weight: 600; color: white; margin-bottom: .35rem; }
 .menu-card-desc  { font-size: .85rem; color: white; }
@@ -616,6 +622,10 @@ td.empty-cell {
     transform: transfo;
 }
 
+.jogo-descricao {
+    color: white;
+    text-align: right;
+}
 /* -----------------------------------------------
    15. UTILITÁRIOS
 ----------------------------------------------- */

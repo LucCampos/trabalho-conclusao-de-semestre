@@ -223,11 +223,11 @@ $artistas = $conn->query("SELECT * FROM artistas ORDER BY nome");
         <table>
             <thead style="background-color: rgba(0, 0, 0, 0.5);">
                 <tr>
-                    <th class="col-foto">Foto</th>
-                    <th>Nome</th>
-                    <th>Gênero</th>
-                    <th>País</th>
-                    <th class="col-acoes">Ações</th>
+                    <th style="color: black;" class="col-foto">Foto</th>
+                    <th style="color: black;">Nome</th>
+                    <th style="color: black;">Gênero</th>
+                    <th style="color: black;">País</th>
+                    <th style="color: black;" class="col-acoes">Ações</th>
                 </tr>
             </thead>
             <tbody>
