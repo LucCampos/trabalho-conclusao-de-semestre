@@ -589,9 +589,17 @@ td.empty-cell {
 .grid-jogos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 4rem;
+    gap: 1.25rem;
     max-width: 9000px;
     margin: 0 auto;
+}
+
+.preco {
+    color: white;
+}
+
+.preco:hover {
+    transform: transfo;
 }
 
 /* -----------------------------------------------
