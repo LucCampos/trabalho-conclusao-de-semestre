@@ -191,7 +191,7 @@ if ($artista_id_filtro) {
 
             <!-- Linha 1: Artista + Título -->
             <div class="form-group">
-                <label for="artista_id">Empresa <span style="color:var(--red)">*</span></label>
+                <label for="artista_id" style="color: white;">Empresa <span style="color:var(--red)">*</span></label>
                 <select style="color: black;" name="artista_id" id="artista_id" required
                         <?php echo isset($_GET['artista_id']) ? 'disabled' : ''; ?>>
                     <option value="">Selecione uma empresa</option>
@@ -209,7 +209,7 @@ if ($artista_id_filtro) {
             </div>
 
             <div class="form-group">
-                <label for="titulo"> Nome <span style="color:var(--red)">*</span></label>
+                <label for="titulo" style="color: white;"> Nome <span style="color:var(--red)">*</span></label>
                 <input style="color: black;" type="text" id="titulo" name="titulo"
                        value="<?php echo htmlspecialchars($musica['titulo'] ?? ''); ?>"
                        required placeholder="Ex: GTA VI, Poppy Playtime 5...">
@@ -217,14 +217,14 @@ if ($artista_id_filtro) {
 
             <!-- Linha 2: Álbum + Gênero -->
             <div class="form-group">
-                <label for="album">Preço</label>
+                <label for="album" style="color: white;">Preço</label>
                 <input style="color: black;" type="text" id="album" name="album"
                        value="<?php echo htmlspecialchars($musica['album'] ?? ''); ?>"
                        placeholder="Ex: R$120,00">
             </div>
 
             <div class="form-group">
-                <label for="genero">Gênero</label>
+                <label for="genero" style="color: white;">Gênero</label>
                 <input style="color: black;" type="text" id="genero" name="genero"
                        value="<?php echo htmlspecialchars($musica['genero'] ?? ''); ?>"
                        placeholder="Ex: Indie, Terror...">
@@ -232,7 +232,7 @@ if ($artista_id_filtro) {
 
             <!-- Linha 3: YouTube + Capa -->
             <div class="form-group">
-                <label for="youtube_link">Trailer do jogo<span style="color:var(--red)">*</span></label>
+                <label for="youtube_link" style="color: white;">Trailer do jogo<span style="color:var(--red)">*</span></label>
                 <input style="color: black;" type="url" id="youtube_link" name="youtube_link"
                        value="<?php echo htmlspecialchars($musica['youtube_link'] ?? ''); ?>"
                        required placeholder="https://www.youtube.com/watch?v=…">
@@ -240,7 +240,7 @@ if ($artista_id_filtro) {
             </div>
 
             <div class="form-group">
-                <label for="imagem_capa">Capa do jogo</label>
+                <label for="imagem_capa" style="color: white;">Capa do jogo</label>
                 <input style="color: black;" type="file" id="imagem_capa" name="imagem_capa" accept="image/*">
                 <small>JPG ou PNG · Máximo 5 MB<?php echo $musica ? ' · Deixe vazio para manter a capa atual' : ''; ?></small>
                 <?php if (!empty($musica['imagem_capa'])): ?>
@@ -253,7 +253,7 @@ if ($artista_id_filtro) {
 
             <!-- Linha 4: Letra (ocupa as 2 colunas) -->
             <div class="form-group full">
-                <label for="letra">Sobre o jogo</label>
+                <label for="letra" style="color: white;">Sobre o jogo</label>
                 <textarea style="color: black;" id="letra" name="letra"
                           placeholder="Cole a descrição do jogo aqui (opcional)…"><?php
                     echo htmlspecialchars($musica['letra'] ?? '');
