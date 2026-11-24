@@ -145,14 +145,14 @@ if (!empty($params)) {
         <form method="get" class="filter-form">
             <div class="filter-group">
                 <div class="filter-item">
-                    <label for="busca">Busca geral</label>
-                    <input type="text" name="busca" id="busca"
+                    <label class="label-new-text" for="busca" style="color: white;">Busca geral</label>
+                    <input class="label-text" type="text" name="busca" id="busca"
                            value="<?php echo htmlspecialchars($_GET['busca'] ?? ''); ?>"
                            placeholder="Título, álbum ou artista…">
                 </div>
                 <div class="filter-item">
-                    <label for="artista">Artista</label>
-                    <select name="artista" id="artista">
+                    <label class="label-new-text" for="artista">Artista</label>
+                    <select class="label-text" name="artista" id="artista">
                         <option value="">Todos os artistas</option>
                         <?php while ($a = $artistas->fetch_assoc()): ?>
                             <option value="<?php echo $a['id']; ?>"
@@ -163,9 +163,9 @@ if (!empty($params)) {
                     </select>
                 </div>
                 <div class="filter-item">
-                    <label for="genero">Gênero</label>
-                    <select name="genero" id="genero">
-                        <option value="">Todos os gêneros</option>
+                    <label class="label-new-text" for="genero">Gênero</label>
+                    <select class="label-text" name="genero" id="genero">
+                        <optionvalue="">Todos os gêneros</option>
                         <?php while ($g = $generos->fetch_assoc()): ?>
                             <option value="<?php echo htmlspecialchars($g['genero']); ?>"
                                 <?php echo (isset($_GET['genero']) && $_GET['genero'] == $g['genero']) ? 'selected' : ''; ?>>

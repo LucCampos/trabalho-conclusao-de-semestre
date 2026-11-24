@@ -188,7 +188,7 @@ textarea {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-                background-image: url("img/papel-de-parede-de-perspectiva-de-linha-de-sintetizador-retro-da-moda-com-efeito-de-fumaca_1017-43048.jpg");
+     background-image: url("img/papel-de-parede-de-perspectiva-de-linha-de-sintetizador-retro-da-moda-com-efeito-de-fumaca_1017-43048.jpg");
 
     padding: 1rem;
 }
@@ -590,6 +590,14 @@ td.empty-cell {
     display: flex;
     gap: .75rem;
     align-items: center;
+}
+
+.label-text {
+    color: black;
+}
+
+.label-new-text {
+    color: white;
 }
 
 .grid-jogos {

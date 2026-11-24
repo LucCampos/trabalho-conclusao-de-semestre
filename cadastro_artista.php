@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // -----------------------------------------------
 // DELETE (igual à Etapa 8c)
 // -----------------------------------------------
-if (isset($_GET['delete_id'])) {
+if (isset($_GET['delete_id'])) {                            
     $id = intval($_GET['delete_id']);
 
     $chk = $conn->prepare("SELECT COUNT(*) AS total FROM musicas WHERE artista_id = ?");
@@ -168,28 +168,28 @@ $artistas = $conn->query("SELECT * FROM artistas ORDER BY nome");
         <div class="form-grid">
 
             <div class="form-group">
-                <label for="nome">Nome do Artista <span style="color:var(--red)">*</span></label>
+                <label for="nome" style="color: white;">Nome do Artista <span style="color:var(--red)">*</span></label>
                 <input style="color: black;" type="text" id="nome" name="nome"
                        value="<?php echo htmlspecialchars($artista['nome'] ?? ''); ?>"
                        required placeholder="Ex: Djavan, Marisa Monte…">
             </div>
 
             <div class="form-group">
-                <label for="genero">Gênero</label>
+                <label for="genero" style="color: white;">Gênero</label>
                 <input style="color: black;" type="text" id="genero" name="genero"
                        value="<?php echo htmlspecialchars($artista['genero'] ?? ''); ?>"
                        placeholder="Ex: MPB, Rock, Samba…">
             </div>
 
             <div class="form-group">
-                <label for="pais">País</label>
+                <label for="pais" style="color: white;">País</label>
                 <input style="color: black;" type="text" id="pais" name="pais"
                        value="<?php echo htmlspecialchars($artista['pais'] ?? ''); ?>"
                        placeholder="Ex: Brasil, EUA…">
             </div>
 
             <div class="form-group">
-                <label for="imagem">Foto do Artista</label>
+                <label for="imagem" style="color: white;">Foto do Artista</label>
                 <input style="color: black;" type="file" id="imagem" name="imagem" accept="image/*">
                 <small>JPG ou PNG · Máximo 5 MB<?php echo $artista ? ' · Deixe vazio para manter a foto atual' : ''; ?></small>
 
@@ -237,19 +237,19 @@ $artistas = $conn->query("SELECT * FROM artistas ORDER BY nome");
                             <td>
                                 <?php if ($row['imagem']): ?>
                                     <img src="<?php echo htmlspecialchars($row['imagem']); ?>"
-                                         alt="<?php echo htmlspecialchars($row['nome']); ?>"
+                                        style="color: white;" alt="<?php echo htmlspecialchars($row['nome']); ?>"
                                          class="table-thumbnail">
                                 <?php else: ?>
                                     <div class="no-image">Sem<br>foto</div>
                                 <?php endif; ?>
                             </td>
-                            <td><?php echo htmlspecialchars($row['nome']); ?></td>
-                            <td><?php echo htmlspecialchars($row['genero']) ?: '—'; ?></td>
-                            <td><?php echo htmlspecialchars($row['pais'])   ?: '—'; ?></td>
+                            <td style="color: white;"><?php echo htmlspecialchars($row['nome']); ?></td>
+                            <td style="color: white;"><?php echo htmlspecialchars($row['genero']) ?: '—'; ?></td>
+                            <td style="color: white;"><?php echo htmlspecialchars($row['pais'])   ?: '—'; ?></td>
                             <td>
                                 <div class="action-buttons">
-                                    <a href="?edit_id=<?php echo $row['id']; ?>" class="btn-edit">✏️ Editar</a>
-                                    <a href="?delete_id=<?php echo $row['id']; ?>"
+                                    <a  href="?edit_id=<?php echo $row['id']; ?>" class="btn-edit">✏️ Editar</a>
+                                    <a  href="?delete_id=<?php echo $row['id']; ?>"
                                        onclick="return confirm('Excluir <?php echo addslashes($row['nome']); ?>?')"
                                        class="btn-delete">🗑️</a>
                                     <a href="cadastro_musica.php?artista_id=<?php echo $row['id']; ?>"
@@ -259,7 +259,7 @@ $artistas = $conn->query("SELECT * FROM artistas ORDER BY nome");
                         </tr>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <tr><td colspan="5" class="empty-cell">Nenhum artista cadastrado ainda.</td></tr>
+                    <tr ><td colspan="5" class="empty-cell" >Nenhum artista cadastrado ainda.</td></tr>
                 <?php endif; ?>
             </tbody>
         </table>
