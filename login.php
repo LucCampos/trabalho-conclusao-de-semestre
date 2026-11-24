@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password"
+                <input type="password" style="color: #7d35c6;"
                     id="senha"
                     name="senha"
                     required
