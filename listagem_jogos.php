@@ -207,6 +207,8 @@ if (!empty($params)) {
             <?php else: ?>
                 <?php echo !empty($_GET) ? 'Nenhum jogo encontrado com esses filtros.' : 'Nenhum jogo cadastrado ainda.'; ?>
             <?php endif; ?>
+
+            <p>Preço: </p>
     </div>
 
 
