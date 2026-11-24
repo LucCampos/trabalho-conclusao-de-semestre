@@ -84,8 +84,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="login-card">
 
         <div class="login-header">
-            <h1>🎮 Catálogo de jogos</h1>
-            <p>Entre com suas credenciais</p>
+            <div><h1>🎮 Catálogo de jogos</h1>
+            <p>Entre com suas credenciais</p></div>
+            
         </div>
 
         <!-- Mensagem de erro ou feedback de logout -->
