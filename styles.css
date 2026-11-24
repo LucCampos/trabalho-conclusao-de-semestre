@@ -309,6 +309,27 @@ textarea {
     color: var(--text);
 }
 
+.jogo-card {
+    box-shadow: var(--shadow-md);
+    transition: transform .2s, box-shadow .2s;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border: 0px solid var(--border);
+}
+
+.jogo-card:hover {
+    transform: translateY(-16px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.13);
+}
+
+.jogo-card img {
+    width: 240px;
+    display: block;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
 .menu-card-icon  { font-size: 2.2rem; margin-bottom: .75rem; font-size: 5rem;}
 .menu-card-title { font-size: 1.05rem; font-weight: 600; color: white; margin-bottom: .35rem; }
 .menu-card-desc  { font-size: .85rem; color: white; }
@@ -452,7 +473,7 @@ small {
    11. TABELAS
 ----------------------------------------------- */
 .table-container {
-    background: var(--surface);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
     overflow: hidden;
@@ -472,7 +493,6 @@ th, td {
 }
 
 th {
-    background: white;
     color: #fff;
     font-size: .82rem;
     font-weight: 600;
@@ -482,7 +502,7 @@ th {
 }
 
 tbody tr:last-child td { border-bottom: none; }
-tbody tr:hover { background: #f8fafc; }
+tbody tr:hover { background-color: rgba(0, 0, 0, 0.35);}
 
 .col-foto,
 .col-capa    { width: 90px;  white-space: nowrap; }
@@ -502,6 +522,10 @@ tbody tr:hover { background: #f8fafc; }
     object-fit: cover;
     border-radius: 6px;
     display: block;
+}
+
+.label {
+    color: white;
 }
 
 .no-image {
@@ -530,7 +554,7 @@ td.empty-cell {
    14. FILTROS
 ----------------------------------------------- */
 .filters {
-    background: var(--surface);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1.25rem 1.5rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
@@ -560,6 +584,13 @@ td.empty-cell {
     align-items: center;
 }
 
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    max-width: 9000px;
+    margin: 0 auto;
+}
 
 /* -----------------------------------------------
    15. UTILITÁRIOS

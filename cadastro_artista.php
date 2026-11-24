@@ -169,28 +169,28 @@ $artistas = $conn->query("SELECT * FROM artistas ORDER BY nome");
 
             <div class="form-group">
                 <label for="nome">Nome do Artista <span style="color:var(--red)">*</span></label>
-                <input type="text" id="nome" name="nome"
+                <input style="color: black;" type="text" id="nome" name="nome"
                        value="<?php echo htmlspecialchars($artista['nome'] ?? ''); ?>"
                        required placeholder="Ex: Djavan, Marisa Monte…">
             </div>
 
             <div class="form-group">
                 <label for="genero">Gênero</label>
-                <input type="text" id="genero" name="genero"
+                <input style="color: black;" type="text" id="genero" name="genero"
                        value="<?php echo htmlspecialchars($artista['genero'] ?? ''); ?>"
                        placeholder="Ex: MPB, Rock, Samba…">
             </div>
 
             <div class="form-group">
                 <label for="pais">País</label>
-                <input type="text" id="pais" name="pais"
+                <input style="color: black;" type="text" id="pais" name="pais"
                        value="<?php echo htmlspecialchars($artista['pais'] ?? ''); ?>"
                        placeholder="Ex: Brasil, EUA…">
             </div>
 
             <div class="form-group">
                 <label for="imagem">Foto do Artista</label>
-                <input type="file" id="imagem" name="imagem" accept="image/*">
+                <input style="color: black;" type="file" id="imagem" name="imagem" accept="image/*">
                 <small>JPG ou PNG · Máximo 5 MB<?php echo $artista ? ' · Deixe vazio para manter a foto atual' : ''; ?></small>
 
                 <?php if (!empty($artista['imagem'])): ?>
@@ -221,7 +221,7 @@ $artistas = $conn->query("SELECT * FROM artistas ORDER BY nome");
 
     <div class="table-container">
         <table>
-            <thead>
+            <thead style="background-color: rgba(0, 0, 0, 0.5);">
                 <tr>
                     <th class="col-foto">Foto</th>
                     <th>Nome</th>

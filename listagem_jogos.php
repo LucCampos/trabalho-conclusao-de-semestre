@@ -141,7 +141,7 @@ if (!empty($params)) {
          method="get" → filtros ficam na URL, permitindo
          favoritar/compartilhar buscas específicas.
     ----------------------------------------------- -->
-    <div class="filters">
+    <div>
         <form method="get" class="filter-form">
             <div class="filter-group">
                 <div class="filter-item">
@@ -197,7 +197,7 @@ if (!empty($params)) {
         <?php while ($row = $musicas->fetch_assoc()):?>
     
         <?php if ($row['imagem_capa']): ?>
-            <img src="<?php echo htmlspecialchars($row['imagem_capa']); ?>"
+            <img class="jogo-card" src="<?php echo htmlspecialchars($row['imagem_capa']); ?>"
                 alt="Capa" class="table-thumbnail" loading="lazy">
             <?php else: ?>
                 <div class="no-image">Sem<br>capa</div>

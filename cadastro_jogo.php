@@ -192,7 +192,7 @@ if ($artista_id_filtro) {
             <!-- Linha 1: Artista + Título -->
             <div class="form-group">
                 <label for="artista_id">Empresa <span style="color:var(--red)">*</span></label>
-                <select name="artista_id" id="artista_id" required
+                <select style="color: black;" name="artista_id" id="artista_id" required
                         <?php echo isset($_GET['artista_id']) ? 'disabled' : ''; ?>>
                     <option value="">Selecione uma empresa</option>
                     <?php while ($row = $artistas->fetch_assoc()): ?>
@@ -204,13 +204,13 @@ if ($artista_id_filtro) {
                     <?php endwhile; ?>
                 </select>
                 <?php if (isset($_GET['artista_id'])): ?>
-                    <input type="hidden" name="artista_id" value="<?php echo intval($_GET['artista_id']); ?>">
+                    <input style="color: black;" type="hidden" name="artista_id" value="<?php echo intval($_GET['artista_id']); ?>">
                 <?php endif; ?>
             </div>
 
             <div class="form-group">
                 <label for="titulo"> Nome <span style="color:var(--red)">*</span></label>
-                <input type="text" id="titulo" name="titulo"
+                <input style="color: black;" type="text" id="titulo" name="titulo"
                        value="<?php echo htmlspecialchars($musica['titulo'] ?? ''); ?>"
                        required placeholder="Ex: GTA VI, Poppy Playtime 5...">
             </div>
@@ -218,14 +218,14 @@ if ($artista_id_filtro) {
             <!-- Linha 2: Álbum + Gênero -->
             <div class="form-group">
                 <label for="album">Preço</label>
-                <input type="text" id="album" name="album"
+                <input style="color: black;" type="text" id="album" name="album"
                        value="<?php echo htmlspecialchars($musica['album'] ?? ''); ?>"
                        placeholder="Ex: R$120,00">
             </div>
 
             <div class="form-group">
                 <label for="genero">Gênero</label>
-                <input type="text" id="genero" name="genero"
+                <input style="color: black;" type="text" id="genero" name="genero"
                        value="<?php echo htmlspecialchars($musica['genero'] ?? ''); ?>"
                        placeholder="Ex: Indie, Terror...">
             </div>
@@ -233,7 +233,7 @@ if ($artista_id_filtro) {
             <!-- Linha 3: YouTube + Capa -->
             <div class="form-group">
                 <label for="youtube_link">Trailer do jogo<span style="color:var(--red)">*</span></label>
-                <input type="url" id="youtube_link" name="youtube_link"
+                <input style="color: black;" type="url" id="youtube_link" name="youtube_link"
                        value="<?php echo htmlspecialchars($musica['youtube_link'] ?? ''); ?>"
                        required placeholder="https://www.youtube.com/watch?v=…">
                 <small>Cole a URL do vídeo (não do canal ou playlist).</small>
@@ -241,7 +241,7 @@ if ($artista_id_filtro) {
 
             <div class="form-group">
                 <label for="imagem_capa">Capa do jogo</label>
-                <input type="file" id="imagem_capa" name="imagem_capa" accept="image/*">
+                <input style="color: black;" type="file" id="imagem_capa" name="imagem_capa" accept="image/*">
                 <small>JPG ou PNG · Máximo 5 MB<?php echo $musica ? ' · Deixe vazio para manter a capa atual' : ''; ?></small>
                 <?php if (!empty($musica['imagem_capa'])): ?>
                     <div class="current-image">
@@ -254,7 +254,7 @@ if ($artista_id_filtro) {
             <!-- Linha 4: Letra (ocupa as 2 colunas) -->
             <div class="form-group full">
                 <label for="letra">Sobre o jogo</label>
-                <textarea id="letra" name="letra"
+                <textarea style="color: black;" id="letra" name="letra"
                           placeholder="Cole a descrição do jogo aqui (opcional)…"><?php
                     echo htmlspecialchars($musica['letra'] ?? '');
                 ?></textarea>
