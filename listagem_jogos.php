@@ -132,7 +132,7 @@ if (!empty($params)) {
         <h2>🕹️Catálogo de jogos</h2>
         <div class="header-actions">
             <a href="index.php" class="btn-back">⬅ Voltar ao Menu</a>
-            <a href="cadastro_musica.php" class="btn-primary">➕ Nova Música</a>
+            <a href="cadastro_musica.php" class="btn-primary">➕ Novo Jogo</a>
         </div>
     </div>
 
