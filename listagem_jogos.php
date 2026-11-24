@@ -193,6 +193,7 @@ if (!empty($params)) {
 
     <!-- TABELA DOS JOGOS -->
     <div class="grid-jogos">
+        <a href="jogo.php">
         <?php if ($musicas->num_rows > 0): ?>
         <?php while ($row = $musicas->fetch_assoc()):?>
     
@@ -208,7 +209,7 @@ if (!empty($params)) {
                 <?php echo !empty($_GET) ? 'Nenhum jogo encontrado com esses filtros.' : 'Nenhum jogo cadastrado ainda.'; ?>
             <?php endif; ?>
 
-            <p>Preço: </p>
+        </a>
     </div>
 
 
