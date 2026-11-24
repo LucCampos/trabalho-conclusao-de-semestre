@@ -599,6 +599,14 @@ td.empty-cell {
     margin: 0 auto;
 }
 
+.preco {
+    color: white;
+}
+
+.preco:hover {
+    transform: transfo;
+}
+
 /* -----------------------------------------------
    15. UTILITÁRIOS
 ----------------------------------------------- */

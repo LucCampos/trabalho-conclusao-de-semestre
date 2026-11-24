@@ -193,13 +193,15 @@ if (!empty($params)) {
 
     <!-- TABELA DOS JOGOS -->
     <div class="grid-jogos">
-        <a href="jogo.php">
         <?php if ($musicas->num_rows > 0): ?>
         <?php while ($row = $musicas->fetch_assoc()):?>
     
         <?php if ($row['imagem_capa']): ?>
+            <a href="jogo.php">
             <img class="jogo-card" src="<?php echo htmlspecialchars($row['imagem_capa']); ?>"
                 alt="Capa" class="table-thumbnail" loading="lazy">
+            <span class="preco">preço: R$00,00 </span>
+            </a>
             <?php else: ?>
                 <div class="no-image">Sem<br>capa</div>
             <?php endif; ?>
@@ -208,8 +210,6 @@ if (!empty($params)) {
             <?php else: ?>
                 <?php echo !empty($_GET) ? 'Nenhum jogo encontrado com esses filtros.' : 'Nenhum jogo cadastrado ainda.'; ?>
             <?php endif; ?>
-
-        </a>
     </div>
 
 
