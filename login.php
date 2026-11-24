@@ -77,6 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Login — Sistema Musical</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🎵</text></svg>">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url("img/papel-de-parede-de-perspectiva-de-linha-de-sintetizador-retro-da-moda-com-efeito-de-fumaca_1017-43048.jpg");
+        }
+    </style>
 </head>
 
 <body class="login-page">
