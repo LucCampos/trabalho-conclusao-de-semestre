@@ -38,7 +38,6 @@
 body {
     font-family: var(--font);
     background-color: var(--bg);
-    color: white;
     line-height: 1.6;
     min-height: 100vh;
     background-image: url("img/fundo.jpg");
@@ -60,9 +59,14 @@ form {
     margin-bottom: 2rem;
 }
 
+.textpurple {
+    color: rgb(30, 16, 75);
+}
+
 .form-group {
     margin-bottom: 1.25rem;
 }
+
 
 label {
     display: block;
@@ -207,16 +211,17 @@ textarea {
 .login-header {
     text-align: center;
     margin-bottom: 1.75rem;
+    color: #310860;
 }
 
 .login-header h1 {
     font-size: 1.6rem;
-    color: white;
+   
     margin-bottom: .25rem;
 }
 
 .login-header p {
-    color: white;
+  
     font-size: .9rem;
 }
 
@@ -232,7 +237,7 @@ textarea {
     border-radius: 6px;
     text-align: center;
     font-size: .82rem;
-    color: white;
+
     border: 1px solid var(--border);
 }
 
